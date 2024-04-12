@@ -2,7 +2,7 @@ name: Wallet API CI for New Pull Requests
 on:
   push:
     branches:
-      - new3
+      - github-actions
       - main
   workflow_dispatch:
     branches:
