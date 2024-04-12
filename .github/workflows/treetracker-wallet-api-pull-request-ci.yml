@@ -4,10 +4,12 @@
 name: Wallet API CI for New Pull Requests
 
 on:
-  pull_request:
-    branches:
-      - master
-      - 'v1.10'
+  workflow_dispatch:
+    inputs:
+      git-tag:
+        description: 'Branch/hash/tag'
+        required: true
+        default: 'new3'
 
 env:
   project-directory: ./
