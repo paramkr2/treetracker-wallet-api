@@ -59,7 +59,7 @@ class ActionTokenService {
     return JWTTools.sign(payload, privateKEY, signingOptions);
   };
 
- static verify(token) {
+ static async verify(token) {
   if (!token) {
     throw new HttpError(401, 'ERROR: no actionToken supplied ');
   }
