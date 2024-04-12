@@ -83,6 +83,7 @@ class ActionTokenService {
 
 async transferTokens( tokens,wallet_id ){
   try{
+    console.log(tokens);
     await this._session.beginTransaction();
     const sender_wallet = await this._walletService.getByName(
       tokens.send_wallet
